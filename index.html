@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gut Health Assessment - Interactive Wellness Journey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Welcome Screen -->
+        <div class="screen welcome-screen active" id="welcome-screen">
+            <div class="welcome-content">
+                <div class="app-logo">
+                    <div class="logo-icon">🌈</div>
+                    <h1 class="app-title">Gut Health Assessment</h1>
+                </div>
+                <p class="app-description">
+                    Discover your digestive wellness with our comprehensive, interactive assessment. 
+                    Get personalized insights and recommendations for optimal gut health.
+                </p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Personalized</h3>
+                        <p>Tailored insights for you</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Comprehensive</h3>
+                        <p>29 key health factors</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Instant Results</h3>
+                        <p>Get recommendations now</p>
+                    </div>
+                </div>
+                <button class="btn btn--primary btn--lg start-btn" onclick="startAssessment()">
+                    Start Your Journey
+                </button>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container" id="progress-container" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-text" id="progress-text">Section 1 of 4</div>
+        </div>
+
+        <!-- Assessment Sections -->
+        <div class="screen assessment-screen" id="assessment-screen" style="display: none;">
+            <div class="section-card" id="section-card">
+                <div class="section-header">
+                    <h2 class="section-title" id="section-title"></h2>
+                    <p class="section-subtitle" id="section-subtitle"></p>
+                </div>
+                
+                <div class="questions-container" id="questions-container">
+                    <!-- Questions will be dynamically inserted here -->
+                </div>
+
+                <div class="section-footer">
+                    <div class="section-score">
+                        <span class="score-label">Section Score:</span>
+                        <span class="score-value" id="section-score">0</span>
+                        <span class="score-max" id="section-max-score">/ 32</span>
+                    </div>
+                    
+                    <div class="navigation-buttons">
+                        <button class="btn btn--outline" id="prev-btn" onclick="previousSection()" style="display: none;">
+                            ← Previous
+                        </button>
+                        <button class="btn btn--primary" id="next-btn" onclick="nextSection()">
+                            Next →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="screen results-screen" id="results-screen" style="display: none;">
+            <div class="results-content">
+                <div class="results-header">
+                    <div class="results-icon" id="results-icon">🎉</div>
+                    <h2>Your Gut Health Assessment Results</h2>
+                </div>
+
+                <div class="score-display">
+                    <div class="total-score" id="total-score">0</div>
+                    <div class="score-label">Total Score</div>
+                    <div class="max-score">out of 116</div>
+                </div>
+
+                <div class="interpretation-card" id="interpretation-card">
+                    <div class="interpretation-level" id="interpretation-level"></div>
+                    <div class="interpretation-description" id="interpretation-description"></div>
+                </div>
+
+                <div class="recommendations-section">
+                    <h3>Personalized Recommendations</h3>
+                    <div class="recommendations-list" id="recommendations-list">
+                        <!-- Recommendations will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="section-breakdown">
+                    <h3>Section Breakdown</h3>
+                    <div class="breakdown-grid" id="breakdown-grid">
+                        <!-- Section scores will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn btn--primary btn--lg" onclick="restartAssessment()">
+                        Take Assessment Again
+                    </button>
+                    <button class="btn btn--outline" onclick="shareResults()">
+                        Share Results
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
