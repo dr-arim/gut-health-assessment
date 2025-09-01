@@ -1312,3 +1312,47 @@ select.form-control {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* Author Credit Styling */
+.author-credit {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border-left: 4px solid #159957;
+}
+
+.author-credit p {
+    margin: 5px 0;
+    color: #1f2937;
+}
+
+.author-credit strong {
+    font-size: 1.1rem;
+    color: #159957;
+}
+
+/* CTA Section */
+.cta-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* Primary Button */
+.btn--primary {
+    background: linear-gradient(90deg, #159957 0%, #155799 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 15px 40px;
+    box-shadow: 0 8px 24px rgba(21, 89, 153, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn--primary:hover {
+    background: linear-gradient(90deg, #155799 0%, #159957 100%);
+    box-shadow: 0 12px 32px rgba(21, 89, 153, 0.5);
+    transform: translateY(-2px);
+}
